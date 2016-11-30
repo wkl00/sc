@@ -3,7 +3,7 @@
 	h1{margin:0;}
 }
 #gnb{display:none;}
-#container{padding-left:15px;padding-right:15px;padding-top:20px;}
+#container{padding:20px 15px 100px;}
 form fieldset > div {background:#f5f6f7;padding:15px;margin-bottom:30px;
 	p:first-child,p:first-child+p{position:relative;padding-left:60px;margin-bottom:3px;}
 	p:first-child+p+p{padding:10px 0 15px 60px;
@@ -14,5 +14,14 @@ form fieldset > div {background:#f5f6f7;padding:15px;margin-bottom:30px;
 	}
 	label[for=user_id],label[for=user_pw]{position:absolute;left:0;top:5px;color:#294b8a;font-weight:bold;}
 	#user_id,#user_pw{height:26px;line-height:26px;width:100%;}
-	&+p{text-align:center;}
+	&+p{text-align:center;
+		input{width:80px;height:35px;font-size:16px;font-weight:bold;color:#294b8a;border:1px solid #294b8a;border-radius:3px;
+			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f6f6f6+69,ededed+100 */
+			background: #ffffff; /* Old browsers */
+			background: -moz-linear-gradient(top,  #ffffff 0%, #f6f6f6 69%, #ededed 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(top,  #ffffff 0%,#f6f6f6 69%,#ededed 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to bottom,  #ffffff 0%,#f6f6f6 69%,#ededed 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+		}
+	}
 }
