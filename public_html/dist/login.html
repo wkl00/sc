@@ -1,0 +1,31 @@
+<? include 'inc/top.html';?>
+		<title>SLRCLUB 로그인</title>
+		<link rel="stylesheet" type="text/css" href="css/login.css" media="all">
+	
+	<body>
+		<div id="wrap">
+			<? include 'inc/header.html';?>
+			<div id="container">
+				<h3 class="tit_1">SLRCLUB LOGIN</h3>
+				<form action="#" method="post">
+					<fieldset>
+						<legend>회원 로그인</legend>
+						<div>
+							<p><label for="user_id">ID</label><input type="text" name="user_id" id="user_id"></p>
+							<p><label for="user_pw">PW</label><input type="password" name="user_pw" id="user_pw"></p>
+							<p>
+								<input type="checkbox" name="save_id" id="save_id">
+								<label for="save_id">ID 저장</label>
+								<input type="checkbox" name="auto_login" id="auto_login" checked>
+								<label for="auto_login">자동 로그인</label>
+							</p>
+							<p>회원 가입과 ID / 비밀번호 찾기는 모바일에서 지원하지 않습니다.<br>PC에서 접속해 진행해주시기 바랍니다.</p>
+						</div>
+						<p><input type="submit" value="LOGIN"></p>
+					</fieldset>
+				</form>
+			</div>
+			<? include 'inc/footer.html';?>
+		</div>
+	</body>
+

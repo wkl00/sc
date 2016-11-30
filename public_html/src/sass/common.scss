@@ -9,13 +9,72 @@
       font-weight: normal;
       font-style: normal;
 }
-*[class*="ico_f_"]:before,*[class*="ico_f_"]:after{font-family:'fontello';}
+*[class*="ico_f_"]:before,*[class*="ico_f_"]:after{font-family:'fontello';font-size:20px;}
 *,*:before,*:after{margin:0;padding:0;box-sizing:border-box;}
+html{overflow-y:scroll;}
 li{list-style:none;}
 img,video{vertical-align:middle;max-width:100%;border:none;}
+input{vertical-align:middle;}
 fieldset{border:none;}
 a{text-decoration:none;color:#333;}
+a:hover,a:focus{color:#415ce1;}
 html{font-size:14px;}
-body,select,input,textarea{font:1em/1.3 'Malgun Gothic',"맑은고딕",'Gulim',"굴림",'Dotum',"돋움",'san-serif'; color:#333;}
+body,select,input,textarea{font:1em/1.3 'arial','Malgun Gothic',"맑은고딕",'Gulim',"굴림",'Dotum',"돋움",'san-serif'; color:#333;}
 h1,h2,h3,h4,h5,h6,strong,em,address{font-size:100%;font-weight:normal;font-style:normal;}
-.blind{position:absolute;left:-9999px;}
+.blind, legend{position:absolute;left:-9999px;text-indent:-9999px;font-size:1px;line-height:1px;}
+.clfix:after{content:"";display:block;clear:both;font-size:0;}
+.clfix{*zoom:1;}
+
+#header{position:relative;border-bottom:1px solid #999;box-shadow:0 3px 3px rgba(0,0,0,0.7);padding-bottom:20px;margin-bottom:10px;
+	h1{background:#5580cf;text-align:center;padding:8px 0;margin-bottom:12px;}
+	.login{position:absolute;top:3px;right:4px;font-size:10px;
+		a{color:#fff;display:block;width:69px;height:28px;line-height:28px;text-align:center;
+			border-radius:3px;border:1px solid rgba(29,45,27,0.6);text-shadow:0 0 2px rgba(0,0,0,0.7);
+			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#739be6+36,739be6+36,5580cf+67 */
+			background: #739be6; /* Old browsers */
+			background: -moz-linear-gradient(top,  #739be6 36%, #739be6 36%, #5580cf 67%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(top,  #739be6 36%,#739be6 36%,#5580cf 67%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to bottom,  #739be6 36%,#739be6 36%,#5580cf 67%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#739be6', endColorstr='#5580cf',GradientType=0 ); /* IE6-9 */
+		}
+	}
+}
+#gnb{
+	li{float:left;padding:5px 20px;height:53px;}
+	.ico_f_1:before{content:"\e801";}
+	.ico_f_2:before{content:"\e828";}
+	.ico_f_3:before{content:"\e826";}
+	.ico_f_4:before{content:"\f1ea";}
+	.ico_f_5:before{content:"\e805";}
+	figure{text-align:center;
+		figcaption{font-size:10px;}
+	}
+}
+#container{padding-bottom:20px;}
+/*타이틀서식*/
+.tit_1{font-size:18px;color:#294b8a;font-weight:bold;margin-bottom:15px;padding-left:10px;}
+.grid .row:after{content:"";display:block;clear:both;}
+.grid .row{*zoom:1;}
+.grid *[class*="col_pc_"]{float:left;}
+.col_pc_1{width:8.33333%;}
+.col_pc_2{width:8.33333%*2;}
+.col_pc_3{width:8.33333%*3;}
+.col_pc_4{width:8.33333%*4;}
+.col_pc_5{width:8.33333%*5;}
+.col_pc_6{width:8.33333%*6;}
+.col_pc_7{width:8.33333%*7;}
+.col_pc_8{width:8.33333%*8;}
+.col_pc_9{width:8.33333%*9;}
+.col_pc_10{width:8.33333%*10;}
+.col_pc_11{width:8.33333%*11;}
+.col_pc_12{width:100%;}
+.col{padding:0 10px;}
+#footer{background:#F4F7FA;border-top:1px solid #cad3e4;padding:10px 0;text-align:center;}
+.child_inline{
+	li{position:relative;display:inline-block;margin-bottom:10px;padding-left:15px;
+		&:before{content:"|";position:absolute;top:3px;left:5px;font-size:10px;color:#aaa;}
+		&:first-child{padding:0;
+			&:before{content:"";}
+		}
+	}
+}
