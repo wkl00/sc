@@ -2,7 +2,6 @@
 #header{padding:0;border:none;box-shadow:none;
 	h1{margin:0;}
 }
-#gnb{display:none;}
 #container{padding:20px 15px 100px;}
 form fieldset > div {background:#f5f6f7;padding:15px;margin-bottom:30px;
 	p:first-child,p:first-child+p{position:relative;padding-left:60px;margin-bottom:3px;}
@@ -12,6 +11,7 @@ form fieldset > div {background:#f5f6f7;padding:15px;margin-bottom:30px;
 	p:first-child+p+p+p{position:relative;border-top:1px solid #dee2e5;margin:0 -15px;padding:15px 0 0 40px;font-size:12px;
 		&:after{content:"";display:block;border-bottom:1px solid #fff;width:100%;position:absolute;top:0;left:0;}
 	}
+	.ico_f_info:before{content:"\e80a";font-size:13px;color:#000;margin:0 3px 0 -15px;}
 	label[for=user_id],label[for=user_pw]{position:absolute;left:0;top:5px;color:#294b8a;font-weight:bold;}
 	#user_id,#user_pw{height:26px;line-height:26px;width:100%;}
 	&+p{text-align:center;

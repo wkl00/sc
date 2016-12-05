@@ -1,13 +1,41 @@
-<? include 'inc/top.html';?>
+<? include 'inc/top.html';?>	
 		<title>SLRCLUB 로그인</title>
 		<link rel="stylesheet" type="text/css" href="css/login.css" media="all">
+		<script type="text/javascript">
+			window.onload = function(){
+				var memberLogin = document.querySelector("#member_login");
+				function regMessage(m1,m2){
+					alert(m1);
+					m2.value = "";
+					m2.focus();						
+				}
+				var chkMember = function(){
+					var ts = this;
+					var user_id = ts.user_id;
+					var reg_id = /^[a-z]{1}\w{6,12}$/g;
+					var result_id = reg_id.exec(user_id.value);
+					if (result_id == null){
+						regMessage('아이디를 잘못 입력하셨습니다.',user_id);
+						return false;
+					}
+					var user_pw = ts.user_pw;
+					var reg_pw = /^\w{6,12}$/g;
+					var result_pw = reg_pw.exec(user_pw.value);
+					if (result_pw == null){
+						regMessage('비밀번호를 잘못 입력하셨습니다.',user_pw);
+						return false;
+					}
+				}
+				memberLogin.onsubmit = chkMember;			
+			}
+		</script>
 	
 	<body>
 		<div id="wrap">
 			<? include 'inc/header.html';?>
 			<div id="container">
 				<h3 class="tit_1">SLRCLUB LOGIN</h3>
-				<form action="#" method="post">
+				<form action="#" method="get" id="member_login">
 					<fieldset>
 						<legend>회원 로그인</legend>
 						<div>
@@ -19,7 +47,7 @@
 								<input type="checkbox" name="auto_login" id="auto_login" checked>
 								<label for="auto_login">자동 로그인</label>
 							</p>
-							<p>회원 가입과 ID / 비밀번호 찾기는 모바일에서 지원하지 않습니다.<br>PC에서 접속해 진행해주시기 바랍니다.</p>
+							<p class="ico_f_info">회원 가입과 ID / 비밀번호 찾기는 모바일에서 지원하지 않습니다.<br>PC에서 접속해 진행해주시기 바랍니다.</p>
 						</div>
 						<p><input type="submit" value="LOGIN"></p>
 					</fieldset>
